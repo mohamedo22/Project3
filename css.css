@@ -14,16 +14,14 @@
 {
     border-color: transparent;
     background-color: black;
-    position: relative;
-   
+    
 }
 #a
 {
-    position: sticky;
+    position: absolute;
     z-index: 5;
-    top: 45vw;
-    margin-left: 85vw;
-    margin-top: -3vw;
+    top: 390vw;
+left:87vw;
 }
 #to_top:hover
 {
