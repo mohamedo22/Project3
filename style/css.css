@@ -1,3 +1,4 @@
+
 :root {
     --cw: rgb(15, 255, 133);
     --c_mw:rgb(195,253,213);
@@ -14,16 +15,14 @@
 {
     border-color: transparent;
     background-color: black;
-    position: relative;
-   
+    
 }
 #a
 {
-    position: sticky;
+    position: absolute;
     z-index: 5;
-    top: 45vw;
-    margin-left: 85vw;
-    margin-top: -3vw;
+    top: 390vw;
+left:87vw;
 }
 #to_top:hover
 {
@@ -514,55 +513,42 @@ li:hover
     box-shadow: inset 0px 0px 6px -2px rgb(209, 35, 35);
     width: 25vw;
     height: 20vw;
-    background-color: var(--c_mw);
     margin: 2vw;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
 }
-
+.rdt *
+{
+    position: relative;
+    z-index: 1;
+}
 .rdt::after {
     content: '';
     width:10vw;
-    height: 3px;
+    height: 40vw;
     background: linear-gradient(to right, rgb(31, 30, 30) ,rgb(15, 255, 133) );
     position: absolute;
-    top: 0vw;
-    left: 0vw;
-    animation: linee 2s infinite alternate-reverse;
+    top: -5vw;
+    left: 7vw;
+    z-index: -1;
+    animation: rotate 2s infinite reverse ease-in-out;
+}
+@keyframes rotate
+{
+    100%
+    {
+       rotate: 360deg;
+    }
 }
 .rdt::before {
     content: '';
-    width:10vw;
-    height: 3px;
-    background: linear-gradient(to right, rgb(31, 30, 30) ,rgb(15, 255, 133) );
+    inset: 5px;
+    border-radius: 8px;
+    background-color: var(--cw);
     position: absolute;
-    bottom: 0vw;
-    right: 0vw;
-    animation: linee2 2s infinite alternate-reverse;
-}
-@keyframes linee
-{
-    0%
-    {
-       left: -3vw;
-    }
-    100%
-    {
-        left: 16vw ;
-    }
-}
-@keyframes linee2
-{
-    0%
-    {
-       right: -3vw;
-    }
-    
-    100%
-    {
-        right: 16vw ;
-    }
+    bottom: .5vw;
+    z-index: 0;
 }
 .hdd
 {
